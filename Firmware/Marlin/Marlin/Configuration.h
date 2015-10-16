@@ -205,7 +205,7 @@
 // #define COREXY
 
 // corse Endstop Settings
-#define ENDSTOPPULLUPS // Comment this out (using // at the start of the line) to disable the endstop pullup resistors
+//#define ENDSTOPPULLUPS // Comment this out (using // at the start of the line) to disable the endstop pullup resistors
 
 #ifndef ENDSTOPPULLUPS
   // fine Enstop settings: Individual Pullups. will be ignord if ENDSTOPPULLUPS is defined
@@ -227,10 +227,10 @@
 #endif
 
 // The pullups are needed if you directly connect a mechanical endswitch between the signal and ground pins.
-const bool X_ENDSTOPS_INVERTING = true; // set to true to invert the logic of the endstops.
-const bool Y_ENDSTOPS_INVERTING = true; // set to true to invert the logic of the endstops.
-const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of the endstops.
-//#define DISABLE_MAX_ENDSTOPS
+const bool X_ENDSTOPS_INVERTING = false; // set to true to invert the logic of the endstops.
+const bool Y_ENDSTOPS_INVERTING = false; // set to true to invert the logic of the endstops.
+const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of the endstops.
+#define DISABLE_MAX_ENDSTOPS
 
 // For Inverting Stepper Enable Pins (Active Low) use 0, Non Inverting (Active High) use 1
 #define X_ENABLE_ON 0
@@ -339,7 +339,7 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 
 // The RepRapDiscount Smart Controller (white PCB)
 // http://reprap.org/wiki/RepRapDiscount_Smart_Controller
-//#define REPRAP_DISCOUNT_SMART_CONTROLLER
+#define REPRAP_DISCOUNT_SMART_CONTROLLER
 
 // The GADGETS3D G3D LCD/SD Controller (blue PCB)
 // http://reprap.org/wiki/RAMPS_1.3/1.4_GADGETS3D_Shield_with_Panel
@@ -349,7 +349,7 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 // http://reprap.org/wiki/RepRapDiscount_Full_Graphic_Smart_Controller
 //
 // ==> REMEMBER TO INSTALL U8glib to your ARDUINO library folder: http://code.google.com/p/u8glib/wiki/u8glib
-#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
+//#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
 
 // The RepRapWorld REPRAPWORLD_KEYPAD v1.1
 // http://reprapworld.com/?products_details&products_id=202&cPath=1591_1626
@@ -422,8 +422,8 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
     #define LCD_WIDTH 20
     #define LCD_HEIGHT 5
   #else
-    #define LCD_WIDTH 20
-    #define LCD_HEIGHT 4
+    #define LCD_WIDTH 8
+    #define LCD_HEIGHT 2
   #endif
 #else //no panel but just lcd
   #ifdef ULTRA_LCD
